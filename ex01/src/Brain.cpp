@@ -5,7 +5,6 @@ Brain::Brain()
 	std::cout << "Brain: Default constructor called." << std::endl;
 }
 
-// Copy Constructor
 Brain::Brain(const Brain& other)
 {
 	std::cout << "Brain: Copy constructor called." << std::endl;
@@ -17,7 +16,6 @@ Brain& Brain::operator=(const Brain& other)
 	std::cout << "Brain: Assignment operator called." << std::endl;
 	if (this != &other)
 	{
-		// Copiando ideia por ideia (Deep copy do array interno)
 		for (int i = 0; i < 100; i++)
 		{
 			this->ideas[i] = other.ideas[i];
